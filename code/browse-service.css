@@ -1,0 +1,132 @@
+:root {
+  /* Color palette */
+  --bg-light:   #f0faff;
+  --bg-card:    #ffffff;
+  --border:     #ddd;
+  --text:       #333;
+  --accent:     #007acc;
+  --accent-hover: #005fa3;
+}
+
+/* Utility classes */
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* Container */
+.browse-services {
+  padding: 60px 30px;
+  background-color: var(--bg-light);
+  color: var(--text);
+}
+
+/* Search box */
+.search-box {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: border-color .2s;
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filters label {
+  flex: 1;
+  font-size: .9rem;
+}
+
+.filters select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  transition: border-color .2s;
+}
+
+.filters select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* Grid layout */
+.service-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Cards */
+.service-card {
+  background-color: var(--bg-card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.service-card:hover,
+.service-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .1);
+}
+
+.service-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.service-card p {
+  margin: .5em 0;
+  line-height: 1.4;
+}
+
+/* Buttons */
+.btn.primary {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color .2s;
+}
+
+.btn.primary:hover,
+.btn.primary:focus {
+  background-color: var(--accent-hover);
+}
+
+/* “No results” message */
+#noResults {
+  text-align: center;
+  font-style: italic;
+  margin-top: 20px;
+  color: var(--text);
+}

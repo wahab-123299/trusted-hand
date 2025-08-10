@@ -1,0 +1,154 @@
+/* Guild Dashboard Layout */
+.guild-dashboard {
+  padding: 60px 30px;
+  background-color: #f9fbff;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.dashboard-card {
+  background-color: white;
+  border: 2px solid #cce6ff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Badge Wall */
+.badge-wall {
+  padding: 40px 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.badge-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  width: 120px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badge img {
+  height: 60px;
+  margin-bottom: 8px;
+}
+
+.badge.locked {
+  opacity: 0.4;
+  filter: grayscale(100%);
+}
+
+.badge.unlocked {
+  opacity: 1;
+  filter: none;
+  font-weight: bold;
+  color: #0066cc;
+}
+
+.badge.unlocked:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 102, 204, 0.2);
+}
+
+/* XP Progress Section */
+.xp-progress {
+  padding: 40px 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.xp-bar-container {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.xp-bar-fill {
+  height: 100%;
+  background-color: #0066cc;
+  width: 65%; /* Example width */
+  animation: xpGrow 1s ease-out forwards;
+}
+
+@keyframes xpGrow {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 65%;
+  }
+}
+
+.xp-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 8px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn.primary {
+  background-color: #0066cc;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #004999;
+}
+
+.btn.outline {
+  border: 2px solid #0066cc;
+  color: #0066cc;
+  background-color: transparent;
+}
+
+.btn.outline:hover {
+  background-color: #e6f2ff;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.2;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+}

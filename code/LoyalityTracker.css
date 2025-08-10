@@ -1,0 +1,47 @@
+.loyalty-tracker {
+  background-color: #fff8e1;
+  border-left: 6px solid #fbc02d;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.loyalty-tracker h3 {
+  color: #f57f17;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.loyalty-tracker p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.loyalty-tracker .reward {
+  background-color: #fff3cd;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #856404;
+  margin-top: 1rem;
+  border: 1px solid #ffeeba;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .loyalty-tracker {
+    padding: 1rem;
+  }
+
+  .loyalty-tracker h3 {
+    font-size: 1.4rem;
+  }
+
+  .loyalty-tracker p {
+    font-size: 0.95rem;
+  }
+}

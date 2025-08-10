@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login – TrustedHands</title>
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+  <section class="auth-form">
+    <h2>🔐 Login to TrustedHands</h2>
+    <form action="/api/login" method="POST">
+      <label>Email</label>
+      <input type="email" name="email" required />
+
+      <label>Password</label>
+      <input type="password" name="password" required />
+
+      <button type="submit" class="btn primary">Login</button>
+      <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    </form>
+  </section>
+</body>
+</html>

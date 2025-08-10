@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guild Dashboard</title>
+  <link rel="stylesheet" href="hair-dashboard.css">
+</head>
+<body>
+
+  <!-- XP Progress Bar -->
+  <div class="dashboard-card">
+    <h3>📈 XP Progress</h3>
+    <div class="xp-bar-container">
+      <div class="xp-bar-fill" id="hairXpFill" style="width: 40%;"></div>
+    </div>
+    <p id="hairXpText">40 XP / 100 XP to reach Artisan rank</p>
+  </div>
+
+  <!-- Badge Wall -->
+  <div class="dashboard-card">
+    <h3>🏅 Your Badges</h3>
+    <div class="badge-grid">
+      <div class="badge unlocked">🔰 Apprentice</div>
+      <div class="badge" id="artisanBadge">⚔️ Artisan</div>
+      <div class="badge locked">🛡️ Master</div>
+    </div>
+  </div>
+
+  <script>
+    let hairXP = 40;
+
+    function updateHairXpBar() {
+      const xpFill = document.getElementById("hairXpFill");
+      const xpText = document.getElementById("hairXpText");
+      const artisanBadge = document.getElementById("artisanBadge");
+
+      xpFill.style.width = hairXP + "%";
+      xpText.textContent = `${hairXP} XP / 100 XP to reach Artisan rank`;
+
+      if (hairXP >= 100) {
+        artisanBadge.classList.remove("locked");
+        artisanBadge.classList.add("unlocked");
+        artisanBadge.innerHTML = "⚔️ Artisan – Unlocked!";
+      }
+    }
+
+    updateHairXpBar();
+  </script>
+
+</body>
+</html>

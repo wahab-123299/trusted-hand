@@ -1,0 +1,62 @@
+/* Container */
+.profile-card {
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 20px auto;
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Profile photo */
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #1f8cdf;
+}
+
+/* Name and trade */
+.profile-card h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #1f8cdf;
+}
+
+.profile-card p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+/* Verified badge */
+.badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 10px;
+  background-color: #e0f7fa;
+  color: #00796b;
+  font-size: 0.85em;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* Stats section */
+.stats {
+  margin-top: 15px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.stats p {
+  margin: 6px 0;
+}

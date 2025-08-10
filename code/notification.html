@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Message Center</title>
+  <link rel="stylesheet" href="notification.css" />
+</head>
+<body>
+  <section class="admin-messages">
+    <h1>📢 Send Message</h1>
+
+    <form class="message-form">
+      <label for="recipient">To:</label>
+      <select id="recipient">
+        <option value="all">All Users</option>
+        <option value="tailoring">Tailoring Guild</option>
+        <option value="mentors">Mentors Only</option>
+        <option value="individual">Specific User</option>
+      </select>
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" placeholder="e.g. Guild Rank Update" />
+
+      <label for="message">Message:</label>
+      <textarea id="message" rows="5" placeholder="Type your message here..."></textarea>
+
+      <button type="submit" class="btn primary">📬 Send Message</button>
+    </form>
+
+    <h2>📜 Sent Messages</h2>
+    <ul class="sent-log">
+      <li><strong>To:</strong> Tailoring Guild | <strong>Subject:</strong> Rank Update | <strong>Status:</strong> Delivered ✅</li>
+      <li><strong>To:</strong> Mentors | <strong>Subject:</strong> Training Module Review | <strong>Status:</strong> Read by 12 🎓</li>
+    </ul>
+  </section>
+
+  <script src="messageForm.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+.contractor-card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+  max-width: 280px;
+  margin: 15px auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contractor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #eee;
+}
+
+h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.guild-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 8px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.view-bio-btn,
+.book-btn {
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.view-bio-btn {
+  background-color: #eee;
+  color: #333;
+}
+
+.book-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.book-btn:hover {
+  background-color: #0056b3;
+}
+
+.view-bio-btn:hover {
+  background-color: #ddd;
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+  .contractor-card {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,115 @@
+/* XP Progress Bar */
+.xp-bar-container {
+  width: 100%;
+  height: 20px;
+  background-color: #ffe6f0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.xp-bar-fill {
+  height: 100%;
+  background-color: #cc0066;
+  transition: width 0.5s ease;
+  position: relative;
+}
+
+.xp-bar-fill::after {
+  content: "40%";
+  position: absolute;
+  right: 8px;
+  top: 0;
+  color: white;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/* Badge Styling */
+.badge.locked {
+  opacity: 0.4;
+  filter: grayscale(100%);
+}
+
+.badge.unlocked {
+  opacity: 1;
+  font-weight: bold;
+  color: #cc0066;
+  transition: text-shadow 0.3s ease;
+}
+
+.badge.unlocked:hover {
+  text-shadow: 0 0 5px #cc0066;
+  cursor: pointer;
+}
+
+/* Guild Header */
+.guild-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+}
+
+/* Dashboard Card */
+.dashboard-card {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+/* Badge Grid */
+.badge-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 8px 12px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn.primary {
+  background-color: #cc0066;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #b3005c;
+}
+
+.btn.outline {
+  border: 2px solid #cc0066;
+  color: #cc0066;
+  background-color: transparent;
+}
+
+.btn.outline:hover {
+  background-color: #ffe6f0;
+}
+
+/* Responsive Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}

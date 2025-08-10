@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post a Job | TrustedHand</title>
+  <link rel="stylesheet" href="post-jobs.css" />
+</head>
+<body>
+  <div class="job-form-wrapper">
+    <h1>Post a Job Opportunity</h1>
+    <p class="subtitle">Connect with trusted artisans and service professionals across Nigeria.</p>
+
+    <form action="/submit-job" method="POST">
+      <label for="jobTitle">Job Title</label>
+      <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g. Plumber, Caregiver, Electrician" required />
+
+      <label for="company">Organization Name</label>
+      <input type="text" id="company" name="company" placeholder="e.g. TrustedHand Lagos Branch" required />
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" placeholder="e.g. Ikeja, Lagos" required />
+
+      <label for="type">Job Type</label>
+      <select id="type" name="type" required>
+        <option value="">-- Select Job Type --</option>
+        <option value="on-demand">On-Demand</option>
+        <option value="daily-hire">Daily Hire</option>
+        <option value="project-based">Project-Based</option>
+        <option value="part-time">Part-Time</option>
+        <option value="full-time">Full-Time</option>
+        <option value="apprenticeship">Apprenticeship</option>
+        <option value="weekend-only">Weekend Only</option>
+        <option value="shift-work">Shift Work</option>
+        <option value="remote-service">Remote Service</option>
+        <option value="mobile-service">Mobile Service</option>
+        <option value="retainer">Retainer-Based</option>
+        <option value="emergency">Emergency Callout</option>
+      </select>
+
+      <label for="description">Job Description</label>
+      <textarea id="description" name="description" rows="6" placeholder="Describe responsibilities, qualifications, and expectations..." required></textarea>
+
+      <label for="email">Contact Email</label>
+      <input type="email" id="email" name="email" placeholder="e.g. hr@trustedhand.ng" required />
+
+      <button type="submit">Submit Job</button>
+    </form>
+  </div>
+</body>
+</html>

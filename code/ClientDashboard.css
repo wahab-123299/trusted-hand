@@ -1,0 +1,71 @@
+.client-dashboard {
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  background: #f4f7fc;
+}
+
+section {
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #007bff;
+}
+
+h3 {
+  border-left: 4px solid #ffeb3b;
+  padding-left: 10px;
+  color: #333;
+}
+
+.quote-btn, .hire-btn {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.quote-btn:hover {
+  background: #005bbb;
+}@media (max-width: 600px) {
+  .client-dashboard {
+    padding: 10px;
+  }
+
+  section {
+    padding: 12px;
+  }
+
+  .quote-btn,
+  .hire-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.hire-btn:hover {
+  background: #005bbb;
+}
+
+.client-dashboard {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.quote-btn::before {
+  content: '💬';
+  margin-right: 8px;
+}
+
+.hire-btn::before {
+  content: '🤝';
+  margin-right: 8px;
+}

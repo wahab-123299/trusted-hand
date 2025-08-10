@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electronics Guild Dashboard</title>
+  <link rel="stylesheet" href="electronics-dashboard.css">
+</head>
+<body>
+  <main class="guild-dashboard" aria-label="Electronics Guild Dashboard">
+    <h1>🔌 Welcome, Oladimeji</h1>
+    <p>Your journey in the Electronics Guild continues. Here's your dashboard:</p>
+
+    <div class="dashboard-grid">
+
+      <!-- Rank -->
+      <section class="dashboard-card" aria-label="Current Rank">
+        <h3>🎖️ Current Rank: Apprentice 🔰</h3>
+        <img src="badges/electronics-apprentice.png" alt="Badge representing Apprentice rank in Electronics Guild">
+      </section>
+
+      <!-- Jobs -->
+      <section class="dashboard-card" aria-label="Matched Jobs">
+        <h3>💼 Matched Jobs</h3>
+        <ul>
+          <li>Repair phone charging port – ₦3,000 – Ikeja</li>
+          <li>Install inverter system – ₦15,000 – Ajah</li>
+        </ul>
+        <a href="job-board.html" class="btn outline">View All Jobs</a>
+      </section>
+
+      <!-- Mentor -->
+      <section class="dashboard-card" aria-label="Mentor Info">
+        <h3>🎓 Your Mentor</h3>
+        <p>Samuel “Circuit Surgeon”</p>
+        <a href="mentor-chat.html" class="btn primary">Message Mentor</a>
+      </section>
+
+      <!-- Quest Progress -->
+      <section class="dashboard-card" aria-label="Quest Progress">
+        <h3>📊 Quest Progress</h3>
+        <ul>
+          <li>✅ Apprentice Quest: Completed</li>
+          <li>🔄 Artisan Quest: In Progress</li>
+          <li>🔒 Master Quest: Locked</li>
+        </ul>
+        <a href="quest-complete.html" class="btn outline">📤 Submit Completed Quest</a>
+      </section>
+
+      <!-- Badge Wall -->
+      <section class="dashboard-card" aria-label="Badge Wall">
+        <h3>🏅 Your Badges</h3>
+        <div class="badge-grid">
+          <div class="badge unlocked">🔰 Apprentice</div>
+          <div class="badge locked">⚔️ Artisan</div>
+          <div class="badge locked">🛡️ Master</div>
+        </div>
+      </section>
+
+      <!-- XP Bar -->
+      <section class="dashboard-card" aria-label="XP Progress">
+        <h3>📈 XP Progress</h3>
+        <div class="xp-bar-container">
+          <div class="xp-bar-fill" style="width: 40%;"></div>
+        </div>
+        <p>40 XP / 100 XP to reach Artisan rank</p>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>

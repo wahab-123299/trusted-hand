@@ -1,0 +1,203 @@
+/* Global styles */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #141414;
+  line-height: 1.1;
+}
+
+/* Header styles */
+header { 
+  background-color: #1f8cdf;
+  color: rgb(243, 146, 19);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 24px;
+  font-family: 'Segoe UI', sans-serif;
+  cursor: pointer;
+}
+
+/* Header logo styles */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header-logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.header-logo h1 {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #1F8CDf;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  display: flex;
+  justify-content: right;
+
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    background-color: transparent; /* Default background */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a.active {
+  background-color: #007acc;
+  color: white;
+  font-weight: bold;
+}
+
+
+nav ul li a:hover {
+    color: rgb(243, 141, 8); /* Example: change link color on hover */
+    text-decoration: underline; /* Underline on hover */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Optional: add a background color on hover */
+    border-radius: 5px; /* Optional: add border radius on hover */
+}
+
+nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Change background on hover */
+}
+
+nav ul li a.active {
+    color: rgb(243, 141, 8); /* Active link color */
+}
+
+/* responsive styles */
+@media (max-width: 768px) {
+    nav-menu ul {
+        flex-direction: column;
+        position: absolute;
+        display: none;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        align-items: center;
+    }
+    nav-menu ul li {
+        margin: 10px 0;
+    }
+
+    nav-menu ul.active {
+        display: flex;
+    }
+    .header {
+        flex-direction: column;;
+        align-items: center;
+    }
+}
+.guild-actions {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.guild-actions img {
+  height: 80px;
+  margin-bottom: 12px;
+}
+
+.guild-jobs, .guild-mentors, .guild-training {
+  padding: 30px;
+  background-color: #f0f8ff;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+.job-card, .mentor-card {
+  border: 1px solid #cce6ff;
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.btn.primary {
+  background-color: #0066cc;
+  color: white;
+}
+
+.btn.outline {
+  border: 2px solid #0066cc;
+  color: #0066cc;
+  background-color: transparent;
+}
+
+.guild-mentors {
+  padding: 40px 30px;
+  background-color: #f0f8ff;
+  border-radius: 12px;
+}
+
+.mentor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.mentor-card {
+  background-color: white;
+  border: 2px solid #cce6ff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.mentor-card img {
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.mentor-card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}

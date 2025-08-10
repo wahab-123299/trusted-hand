@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="TrustedHand - connect with skilled artisans, post jobs, join guilds, grow your craft." />
+  <meta name="keywords" content="Repairs, Jobs, Apprenticeship, Mentorship, Contractors, Lagos, Nigeria" />
+  <meta name="author" content="TrustedHand" />
+  <title>TrustedHand | skill. trust. community.</title>
+  <link rel="icon" href="hands.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="contractor-profile.css" />
+  <meta name="theme-color" content="#0066cc" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="hands.png" alt="TrustedHand Logo" width="80" height="100" />
+      <h1>TrustedHands</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="TrustedHands.html">Home</a></li>
+        <li><a href="BrowserContractor.html">Browse Contractors</a></li>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="job-listing.html">Jobs</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contractor-profile">
+      <img src="contractor.jpg" alt="Contractor Photo" class="profile-img" />
+      <h2>Oladimeji – Plumbing Expert</h2>
+      <p>Location: Ikeja, Lagos</p>
+      <div class="rating-summary">
+        <span id="avgRating">Average Rating: 4.6 ★</span>
+        <span id="totalReviews">(12 reviews)</span>
+      </div>
+    </section>
+
+    <section class="review-summary">
+      <h3>Client Reviews</h3>
+      <p id="reviewStats">Average Rating: 0 ★ | 0 Reviews</p>
+      <ul id="reviewList"></ul>
+    </section>
+
+    <hr />
+
+    <section class="review-section">
+      <h3>Leave a Review</h3>
+      <form id="reviewForm">
+        <label for="stars">Your Rating:</label>
+        <select id="stars" required>
+          <option value="5">★★★★★</option>
+          <option value="4">★★★★</option>
+          <option value="3">★★★</option>
+          <option value="2">★★</option>
+          <option value="1">★</option>
+        </select>
+
+        <textarea id="reviewText" placeholder="Share your experience..." required></textarea>
+        <label>
+          <input type="checkbox" id="anonymous" /> Post as Anonymous
+        </label>
+        <button type="submit">Submit Review</button>
+      </form>
+    </section>
+
+    <hr />
+
+    <section class="review-list">
+      <h3>All Reviews</h3>
+      <ul id="reviews"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TrustedHand Artisan Network</p>
+  </footer>
+
+  <script src="contractor-profile.js"></script>
+</body>
+</html>

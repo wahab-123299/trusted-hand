@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contractor Details</title>
+  <link rel="stylesheet" href="contractor-profile.css" />
+</head>
+<body>
+  <header>
+    <h1>TrustedHands</h1>
+  </header>
+
+  <main>
+    <section class="contractor-profile">
+      <img id="contractorImg" src="" alt="Contractor Photo" class="profile-img" />
+      <h2 id="contractorName"></h2>
+      <p id="contractorDetails"></p>
+      <p class="badge">✅ Verified Contractor</p>
+    </section>
+
+    <section class="contractor-bio">
+      <h3>About</h3>
+      <p id="contractorBio"></p>
+    </section>
+
+    <section class="reviews">
+      <h3>Client Reviews</h3>
+      <ul id="reviewList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TrustedHands</p>
+  </footer>
+
+  <script>
+    // Sample data
+    const contractors = {
+      jane123: {
+        name: "Jane Doe",
+        img: "jane.jpg",
+        details: "Plumbing Expert • 10+ years experience • Based in Ikeja",
+        bio: "Jane specializes in pipe installation, emergency leak repairs, and high-rise kitchen fittings.",
+        reviews: [
+          "★★★★★ – Outstanding work!",
+          "★★★★ – Very professional."
+        ]
+      },
+      ola456: {
+        name: "Oladimeji",
+        img: "oladimeji.jpg",
+        details: "Electrical Specialist • 8+ years • Based in Surulere",
+        bio: "Oladimeji is known for reliable wiring, generator installation, and smart home setups.",
+        reviews: [
+          "★★★★★ – Super efficient!",
+          "★★★★ – Great communication."
+        ]
+      }
+    };
+
+    // Get ID from URL
+    const params = new URLSearchParams(window.location.search);
+    const contractorId = params.get("id");
+
+    if (contractors[contractorId]) {
+      const data = contractors[contractorId];
+      document.getElementById("contractorImg").src = data.img;
+      document.getElementById("contractorName").textContent = data.name;
+      document.getElementById("contractorDetails").textContent = data.details;
+      document.getElementById("contractorBio").textContent = data.bio;
+
+      const reviewList = document.getElementById("reviewList");
+      data.reviews.forEach(review => {
+        const li = document.createElement("li");
+        li.textContent = review;
+        reviewList.appendChild(li);
+      });
+    } else {
+      document.querySelector("main").innerHTML = "<p>Contractor not found.</p>";
+    }
+  </script>
+</body>
+</html>

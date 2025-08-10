@@ -1,0 +1,144 @@
+/* ===============================
+   🌐 Global Styles
+=============================== */
+:root {
+  --bg-module: #ffffff;
+  --border-color: #ccc;
+  --text-main: #141414;
+  --text-subtle: #555;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+/* ===============================
+   🧭 Header Styles
+=============================== */
+header {
+  background-color: #0066cc;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Header logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+.logo h1 {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #004c99;
+}
+
+/* ===============================
+   ⚙️ Admin Settings Section
+=============================== */
+.admin-settings {
+  background-color: var(--bg-module);
+  padding: 30px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.admin-settings h1 {
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  color: var(--text-main);
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-form label {
+  font-weight: 600;
+  color: var(--text-subtle);
+}
+
+.settings-form input,
+.settings-form select {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background-color: #fff;
+  color: var(--text-main);
+}
+
+/* ===============================
+   📱 Responsive Styles
+=============================== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    display: none;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .admin-settings {
+    padding: 20px 10px;
+  }
+
+  .admin-settings h1 {
+    font-size: 1.25rem;
+  }
+}
+

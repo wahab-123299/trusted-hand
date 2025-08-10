@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TrustedHand - connect with skilled artisans, post jobs, join guilds, grow your craft." />
+  <meta name="keywords" content="Repairs, Jobs, Apprenticeship, Mentorship, Contractors, Lagos, Nigeria" />
+  <meta name="author" content="TrustedHand" />
+  <title>TrustedHand | skill. trust. community.</title>
+  <link rel="icon" href="hands.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="contact.css" />
+  <meta name="theme-color" content="#0066cc" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="hands.png" alt="TrustedHand Logo" width="80" height="100" />
+      <h1>TrustedHands</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="TrustedHands.html">Home</a></li>
+        <li><a href="BrowserContractor.html">Browse Contractors</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="job-listing.html">Jobs</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <nav className="nav-menu"> <!-- not just nav-menu ul -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const links = document.querySelectorAll("nav ul li a");
+        const current = window.location.pathname.split("/").pop();
+        links.forEach(link => {
+          if (link.getAttribute("href") === current) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+    </script>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <h2>📬 Contact Us</h2>
+      <p>Have questions, feedback, or partnership inquiries? We'd love to hear from you.</p>
+      <form class="contact-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="you@example.com" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TrustedHand Artisan Network</p>
+  </footer>
+</body>
+</html>

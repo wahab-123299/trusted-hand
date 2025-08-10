@@ -1,0 +1,60 @@
+.booking-wizard {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+.booking-wizard label {
+  display: block;
+  margin-bottom: 10px;
+}
+.booking-wizard input,
+.booking-wizard select,
+.booking-wizard textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.booking-wizard button {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.booking-wizard button:last-child {
+  background: transparent;
+  color: #333;
+}
+.booking-wizard button:hover {
+  background: #0056b3;
+}
+
+.booking-wizard button:last-child:hover {
+  background: #f0f0f0;
+}
+
+.booking-wizard input:focus,
+.booking-wizard select:focus,
+.booking-wizard textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.2);
+}
+
+@media (max-width: 480px) {
+  .booking-wizard {
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  .booking-wizard .button-group {
+    flex-direction: column;
+  }
+}

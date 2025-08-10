@@ -1,0 +1,127 @@
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f8fc;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #0066cc;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+section {
+  padding: 40px 30px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Guild Actions */
+.guild-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #e6f2ff;
+}
+
+.guild-actions img {
+  height: 80px;
+}
+
+/* Job Cards */
+.job-card {
+  background-color: #f9fbff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Training Quests */
+.guild-training ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+}
+
+.guild-training li {
+  margin-bottom: 10px;
+}
+
+/* Rank Tracker */
+.rank-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-size: 1.2rem;
+  padding-left: 0;
+}
+
+.rank-list li.active {
+  font-weight: bold;
+  color: #0066cc;
+}
+
+/* Mentor Grid */
+.mentor-grid {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mentor-card {
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.mentor-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn.primary {
+  background-color: #0066cc;
+  color: white;
+}
+
+.btn.outline {
+  border: 2px solid #0066cc;
+  color: #0066cc;
+  background-color: transparent;
+}
+
+.btn:hover {
+  background-color: #004999;
+  color: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #e0e0e0;
+  font-size: 0.9rem;
+}

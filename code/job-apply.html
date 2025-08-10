@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply for Artisan Job</title>
+  <link rel="stylesheet" href="job-apply.css" />
+</head>
+<body>
+
+  <section class="job-apply">
+    <h1>📬 Apply for Job</h1>
+    <p>Fill out the form below to apply for this artisan job.</p>
+
+    <form action="#" method="post" enctype="multipart/form-data" class="apply-form">
+
+      <label for="job-title">🛠️ Job Title:</label>
+      <input type="text" id="job-title" name="job-title" value="Custom Agbada Design" readonly>
+
+      <label for="name">👤 Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="guild">🧵 Your Guild:</label>
+      <select id="guild" name="guild" required>
+        <option value="">Select Guild</option>
+        <option value="tailoring">Tailoring</option>
+        <option value="electronics">Electronics</option>
+        <option value="plumbing">Plumbing</option>
+        <option value="hair">Hair Styling</option>
+      </select>
+
+      <label for="rank">🛡️ Your Rank:</label>
+      <select id="rank" name="rank" required>
+        <option value="">Select Rank</option>
+        <option value="apprentice">🔰 Apprentice</option>
+        <option value="artisan">⚔️ Artisan</option>
+        <option value="master">🛡️ Master</option>
+      </select>
+
+      <label for="samples">📎 Upload Work Samples:</label>
+      <input type="file" id="samples" name="samples" accept="image/*,video/*">
+
+      <label for="note">📝 Cover Note:</label>
+      <textarea id="note" name="note" rows="4" placeholder="Tell us why you’re a good fit..."></textarea>
+
+      <button type="submit" class="btn primary">🚀 Submit Application</button>
+    </form>
+  </section>
+
+</body>
+</html>

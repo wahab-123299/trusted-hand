@@ -1,0 +1,82 @@
+<section class="guild-dashboard">
+  <h1>🧵 Welcome, Oladimeji</h1>
+  <p>Your journey in the Tailoring Guild continues. Here's your dashboard:</p>
+
+  <div class="dashboard-grid">
+
+    <!-- Rank -->
+    <div class="dashboard-card">
+      <h3>🎖️ Current Rank: Apprentice 🔰</h3>
+      <img src="badges/tailoring-apprentice.png" alt="Apprentice Badge" />
+    </div>
+
+    <!-- Jobs -->
+    <div class="dashboard-card">
+      <h3>💼 Matched Jobs</h3>
+      <ul>
+        <li>Repair torn dress – ₦2,000 – Mushin</li>
+        <li>Design custom agbada – ₦10,000 – Victoria Island</li>
+      </ul>
+      <a href="job-board.html" class="btn outline">View All Jobs</a>
+    </div>
+
+    <!-- Mentor -->
+    <div class="dashboard-card">
+      <h3>🎓 Your Mentor</h3>
+      <p>Abiola “The Thread Whisperer”</p>
+      <a href="mentor-chat.html" class="btn primary">Message Mentor</a>
+    </div>
+
+    <!-- Quest Progress -->
+    <div class="dashboard-card">
+      <h3>📊 Quest Progress</h3>
+      <ul>
+        <li>✅ Apprentice Quest: Completed</li>
+        <li>🔄 Artisan Quest: In Progress</li>
+        <li>🔒 Master Quest: Locked</li>
+      </ul>
+      <a href="quest-complete.html" class="btn outline">📤 Submit Completed Quest</a>
+    </div>
+
+    <!-- Badge Wall -->
+    <div class="dashboard-card">
+      <h3>🏅 Your Badges</h3>
+      <div class="badge-grid">
+        <div class="badge unlocked">🔰 Apprentice</div>
+        <div class="badge locked" id="artisanBadge">⚔️ Artisan</div>
+        <div class="badge locked">🛡️ Master</div>
+      </div>
+    </div>
+
+    <!-- XP Bar -->
+    <div class="dashboard-card">
+      <h3>📈 XP Progress</h3>
+      <div class="xp-bar-container">
+        <div class="xp-bar-fill" id="tailoringXpFill"></div>
+      </div>
+      <p id="tailoringXpText">40 XP / 100 XP to reach Artisan rank</p>
+    </div>
+
+  </div>
+
+  <script>
+    let tailoringXP = 40;
+
+    function updateTailoringXpBar() {
+      const xpFill = document.getElementById("tailoringXpFill");
+      const xpText = document.getElementById("tailoringXpText");
+      const artisanBadge = document.getElementById("artisanBadge");
+
+      xpFill.style.width = tailoringXP + "%";
+      xpText.textContent = `${tailoringXP} XP / 100 XP to reach Artisan rank`;
+
+      if (tailoringXP >= 100) {
+        artisanBadge.classList.remove("locked");
+        artisanBadge.classList.add("unlocked");
+        artisanBadge.innerHTML = "⚔️ Artisan – Unlocked!";
+      }
+    }
+
+    updateTailoringXpBar();
+  </script>
+</section>

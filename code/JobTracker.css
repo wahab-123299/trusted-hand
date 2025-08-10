@@ -1,0 +1,82 @@
+/* Container for each job */
+.job-tracker {
+  background-color: #fff;
+  border-left: 6px solid #29b6f6;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.job-tracker:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.job-tracker h3 {
+  margin-bottom: 0.5rem;
+  color: #0066cc;
+  font-size: 1.4rem;
+}
+
+.job-tracker p {
+  margin: 0.4rem 0;
+  color: #555;
+}
+
+.job-tracker span {
+  font-weight: bold;
+}
+
+/* Review Button */
+.review-btn {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.review-btn:hover {
+  background-color: #004c99;
+}
+
+/* Dashboard Container */
+.client-dashboard {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.client-dashboard h2 {
+  font-size: 2rem;
+  color: #0066cc;
+  margin-bottom: 0.5rem;
+}
+
+.client-dashboard h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .job-tracker h3 {
+    font-size: 1.2rem;
+  }
+
+  .job-tracker p {
+    font-size: 0.95rem;
+  }
+
+  .client-dashboard {
+    padding: 0.5rem;
+  }
+}
