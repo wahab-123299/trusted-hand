@@ -1,0 +1,27 @@
+.mentor-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.mentor-table th,
+.mentor-table td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.btn.approve {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn.reject {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn.info {
+  background-color: #007acc;
+  color: white;
+}

@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f8fc;
+  color: #333;
+}
+
+.quest-completion {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.quest-completion h1 {
+  font-size: 1.8em;
+  color: #1f8cdf;
+  margin-bottom: 10px;
+}
+
+.quest-completion p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.quest-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #444;
+}
+
+.quest-form input,
+.quest-form select,
+.quest-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  background-color: #f9f9f9;
+}
+
+.quest-form textarea {
+  resize: vertical;
+}
+
+.btn.primary {
+  margin-top: 20px;
+  background-color: #1e88e5;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.primary:hover {
+  background-color: #1565c0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .quest-completion {
+    margin: 20px;
+    padding: 20px;
+  }
+}

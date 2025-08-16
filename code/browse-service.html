@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Browse Services – TrustedHand</title>
+  <link rel="stylesheet" href="browse-service.css" />
+</head>
+<body>
+  <section class="browse-services">
+    <h1>🔍 Explore Artisan Services</h1>
+    <p>Find artisans across all hand work, odd jobs, and professions.</p>
+
+    <label for="searchBox" class="visually-hidden">Search Services</label>
+    <input
+      id="searchBox"
+      class="search-box"
+      type="text"
+      placeholder="Search by skill, profession, or location…"
+    />
+
+    <form class="filters" aria-label="Filter services">
+      <label for="guildFilter">
+        Guild/Profession
+        <select id="guildFilter">
+          <option value="">All Guilds/Professions</option>
+          <option value="tailoring">Tailoring</option>
+          <option value="plumbing">Plumbing</option>
+          <option value="hair">Hair-Styling</option>
+          <option value="electronics">Electronics</option>
+        </select>
+      </label>
+
+      <label for="rankFilter">
+        Rank
+        <select id="rankFilter">
+          <option value="">All Ranks</option>
+          <option value="novice1">Novice ★☆☆</option>
+          <option value="novice2">Novice ★★☆</option>
+          <option value="novice3">Novice ★★★</option>
+          <option value="artisan1">Artisan ★☆☆</option>
+          <option value="artisan2">Artisan ★★☆</option>
+          <option value="artisan3">Artisan ★★★</option>
+          <option value="master1">Master ★☆☆</option>
+          <option value="master2">Master ★★☆</option>
+          <option value="master3">Master ★★★</option>
+        </select>
+      </label>
+
+      <label for="locationFilter">
+        Location
+        <select id="locationFilter">
+          <option value="">All Locations</option>
+          <option value="lagos">Lagos</option>
+          <option value="abuja">Abuja</option>
+          <option value="port-harcourt">Port Harcourt</option>
+        </select>
+      </label>
+    </form>
+
+    <div class="service-grid" id="serviceGrid">
+      <!-- Sample service cards -->
+      <div class="service-card tailoring artisan2 lagos">
+        <h3>Tailor – Artisan ★★☆</h3>
+        <p>Lagos</p>
+      </div>
+      <div class="service-card plumbing master3 abuja">
+        <h3>Plumber – Master ★★★</h3>
+        <p>Abuja</p>
+      </div>
+      <div class="service-card hair novice1 port-harcourt">
+        <h3>Hair Stylist – Novice ★☆☆</h3>
+        <p>Port Harcourt</p>
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
+
+    <p id="noResults" class="hidden" aria-live="polite">
+      No services match your criteria.
+    </p>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const searchBox = document.getElementById("searchBox");
+      const guildSelect = document.getElementById("guildFilter");
+      const rankSelect = document.getElementById("rankFilter");
+      const locationSelect = document.getElementById("locationFilter");
+      const serviceCards = document.querySelectorAll(".service-card");
+      const noResults = document.getElementById("noResults");
+
+      function filterServices() {
+        const searchTerm = searchBox.value.toLowerCase();
+        const guildFilter = guildSelect.value;
+        const rankFilter = rankSelect.value;
+        const locationFilter = locationSelect.value;
+
+        let visibleCount = 0;
+
+        serviceCards.forEach((card) => {
+          const text = card.textContent.toLowerCase();
+          const matchesSearch = text.includes(searchTerm);
+          const matchesGuild = !guildFilter || card.classList.contains(guildFilter);
+          const matchesRank = !rankFilter || card.classList.contains(rankFilter);
+          const matchesLocation = !locationFilter || card.classList.contains(locationFilter);
+
+          if (matchesSearch && matchesGuild && matchesRank && matchesLocation) {
+            card.style.display = "block";
+            visibleCount++;
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        noResults.classList.toggle("hidden", visibleCount > 0);
+      }
+
+      searchBox.addEventListener("input", filterServices);
+      guildSelect.addEventListener("change", filterServices);
+      rankSelect.addEventListener("change", filterServices);
+      locationSelect.addEventListener("change", filterServices);
+
+      filterServices(); // Initial filter on page load
+    });
+  </script>
+
+  <script src="/js/browse-services.js"></script>
+
+  <footer>
+    <p>&copy; 2025 TrustedHand Artisan Network</p>
+  </footer>
+</body>
+</html>

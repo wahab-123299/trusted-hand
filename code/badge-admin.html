@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Badge Management – Admin</title>
+  <link rel="stylesheet" href="badge-admin.css" />
+</head>
+<body>
+  <section class="badge-admin">
+    <h1>🏅 Badge Management</h1>
+
+    <form class="badge-form">
+      <label for="badge-name">Badge Name:</label>
+      <input type="text" id="badge-name" placeholder="e.g. Master Tailor" required />
+
+      <label for="badge-description">Description:</label>
+      <textarea id="badge-description" rows="3" placeholder="What does this badge represent?" required></textarea>
+
+      <label for="badge-category">Category:</label>
+      <select id="badge-category">
+        <option value="skill">Skill</option>
+        <option value="performance">Performance</option>
+        <option value="community">Community</option>
+      </select>
+
+      <button type="submit" class="btn primary">➕ Create Badge</button>
+    </form>
+
+    <h2>🎖️ Existing Badges</h2>
+    <ul class="badge-list">
+      <li><strong>Master Tailor</strong> – Skill | <em>Awarded to top-ranked tailors</em></li>
+      <li><strong>Top Mentor</strong> – Community | <em>Recognized for mentoring excellence</em></li>
+    </ul>
+  </section>
+
+  <script src="badge-admin.js" defer></script>
+</body>
+</html>

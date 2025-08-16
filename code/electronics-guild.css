@@ -1,0 +1,105 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9fc;
+  color: #333;
+}
+
+.guild-profile {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.guild-profile h1 {
+  font-size: 2rem;
+  color: #cc0066;
+}
+
+.guild-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.guild-actions img {
+  width: 80px;
+  height: auto;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn.primary {
+  background-color: #cc0066;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #b3005c;
+}
+
+.btn.outline {
+  border: 2px solid #cc0066;
+  color: #cc0066;
+  background-color: transparent;
+}
+
+.btn.outline:hover {
+  background-color: #ffe6f0;
+}
+
+.guild-jobs,
+.guild-mentors,
+.guild-training {
+  margin: 2rem 0;
+}
+
+.job-card,
+.mentor-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.rank-tracker {
+  background-color: #f0f8ff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.rank-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.rank-list li {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background-color: #eee;
+}
+
+.rank-list li.active {
+  background-color: #cc0066;
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  margin-top: 3rem;
+}

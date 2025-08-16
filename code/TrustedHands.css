@@ -1,0 +1,608 @@
+/* Global styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+/* Header styles */
+header {
+  background-color: #0066cc;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Header logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+.logo h1 {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #004c99;
+}
+
+/* responsive styles */
+@media (max-width: 768px) {
+    nav-menu ul {
+        flex-direction: column;
+        position: absolute;
+        display: none;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        align-items: center;
+    }
+    nav-menu ul li {
+        margin: 10px 0;
+    }
+
+    nav-menu ul.active {
+        display: flex;
+    }
+    .header {
+        flex-direction: column;;
+        align-items: center;
+    }
+}
+
+/*main content styles */
+main {
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.6;
+    font-size: 16px;    
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: justify;
+
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #1f8cdf;
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.auth-section {
+  background-color: transparent;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.auth-buttons a {
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.auth-buttons a.btn.outline {
+  background-color: white;
+  border: 2px solid #0000;
+  color: #007acc;
+}
+
+.auth-buttons a.primary {
+  background-color: #007acc;
+}
+
+/* Footer styles */
+footer {
+    background-color: #1f8cdf;
+    color: white;
+    text-align: center;
+    padding: 24px;
+    position: relative;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.9em;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 30px;
+    background-color: #f0f8ff;
+    flex-direction: column;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #0066cc;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.hero a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1f8cdf;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.hero a:hover {
+    background-color: #0066cc;
+    color: rgb(243, 146, 19);
+    transition: background-color 0.3s ease;
+}
+
+.hero.outline{
+    border: 2px solid #1f8cdf;
+    color: #1f8cdf;
+    background-color: transparent;
+}
+
+.hero img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.btn.primary {
+    background-color: #1f8cdf;
+    color: white;
+}
+
+.job-listings {
+    background-color: #ffffff;
+    padding: 40px;
+    text-align: center;
+}
+
+.job-listings h2 {
+    font-size: 2rem;
+    color: #1f8cdf;
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    margin-top: auto;
+}
+
+.job-listings h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.job-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.job-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-bottom: auto;
+}
+
+.job-card h3 {
+    font-size: 1.5rem;
+    color: #1f8cdf;
+    margin-top: 0;
+}
+
+.job-card p {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.btn.apply {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1f8cdf;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
+.btn.outline {
+    border: 2px solid #1f8cdf;
+    color: #1f8cdf;
+    background-color: transparent;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+}
+
+a.btn.outline {
+    margin-right: 12px;
+    padding-top: 20px;
+}
+
+
+.btn.apply:hover {
+    background-color: #0066cc;
+    transition: background-color 0.3s ease;
+}
+
+.veiw-all {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+.guild {
+    background-color: #f0f8ff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.guild h2 {
+    font-size: 2rem;
+    color: #1f8cdf;
+    margin-bottom: 14px;
+}
+
+.guild p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.guild-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.guild-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    display: flex;
+}
+
+.guild-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;   
+}
+
+.guild-card a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.guild-card img {
+    height: 50px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 16px;
+    width: 50px;
+    justify-content: center;
+}
+
+.guild-card h3 {
+    font-size: 1.5rem;
+    color: #1f8cdf;
+}
+
+.why-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.why-section h2 {
+    font-size: 2rem;
+    color: #1f8cdf;
+    margin-bottom: 24px;
+}
+
+.why-section p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.why-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.why-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+}
+
+.why-card h3 {
+    font-size: 1.5rem;
+    color: #1f8cdf;
+    margin-bottom: 12px;
+}
+
+.mentorship-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 30px;
+  background-color: #f0f8ff;
+}
+
+.mentorship-content {
+  max-width: 600px;
+}
+
+.mentorship-section h2 {
+  font-size: 2rem;
+  color: #0066cc;
+  margin-bottom: 12px;
+}
+
+.mentorship-section p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 24px;
+}
+
+.mentorship-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin-right: 12px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.btn.primary {
+  background-color: #0066cc;
+  color: white;
+}
+
+.btn.outline {
+  border: 2px solid #0066cc;
+  background-color: transparent;
+  color: #0066cc;
+}
+
+.app-preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9fbff;
+  padding: 60px 30px;
+}
+
+.app-text {
+  max-width: 500px;
+}
+
+.app-preview h2 {
+  font-size: 2rem;
+  color: #0066cc;
+  margin-bottom: 12px;
+}
+
+.app-preview p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 24px;
+}
+
+.app-image img {
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 12px;
+}
+
+.btn.primary {
+  background-color: #0066cc;
+  color: #fff;
+}
+
+.btn.outline {
+  border: 2px solid #0066cc;
+  color: #0066cc;
+  background-color: transparent;
+}
+
+
+.site-footer {
+  background-color: #0066cc;
+  color: white;
+  padding: 40px 30px;
+  font-size: 0.95rem;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.footer-brand img {
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a, .footer-social a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #e0e0e0;
+}
+
+
+.job-board {
+  padding: 60px 30px;
+  background-color: #ffffff;
+}
+
+.job-board h1 {
+  font-size: 2.5rem;
+  color: #0066cc;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.job-board p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.job-filters {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.job-filters select {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.job-board-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.job-pagination {
+  margin-top: 40px;
+  text-align: center;
+}
+

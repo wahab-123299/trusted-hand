@@ -1,0 +1,66 @@
+.review-section {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.review-section h4 {
+  font-size: 1.5em;
+  color: #1f8cdf;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Individual review card */
+.review-card {
+  background-color: #f6f9fc;
+  border-left: 4px solid #1e88e5;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-card p {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.review-card blockquote {
+  margin-top: 8px;
+  font-style: italic;
+  color: #555;
+  quotes: "“" "”" "‘" "’";
+}
+
+.review-card blockquote::before {
+  content: open-quote;
+}
+
+.review-card blockquote::after {
+  content: close-quote;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .review-section {
+    padding: 15px;
+  }
+
+  .review-card {
+    padding: 12px;
+  }
+
+  .review-section h4 {
+    font-size: 1.3em;
+  }
+}

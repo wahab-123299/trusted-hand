@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guild Analytics Overview</title>
+  <link rel="stylesheet" href="guild-analytics.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <section class="guild-analytics">
+    <h1>📈 Guild Analytics Overview</h1>
+
+    <!-- Tailoring Guild -->
+    <div class="analytics-card">
+      <h2>🧵 Tailoring Guild</h2>
+      <ul>
+        <li>👥 Members: 1,240</li>
+        <li>⚔️ Rank Breakdown: 620 Apprentices, 480 Artisans, 140 Masters</li>
+        <li>📈 Avg XP Growth: +12% this month</li>
+        <li>🎓 Active Mentors: 18</li>
+      </ul>
+      <canvas id="tailoringChart" width="400" height="200"></canvas>
+    </div>
+
+    <!-- Electronics Guild -->
+    <div class="analytics-card">
+      <h2>🔌 Electronics Guild</h2>
+      <ul>
+        <li>👥 Members: 920</li>
+        <li>⚔️ Rank Breakdown: 400 Apprentices, 380 Artisans, 140 Masters</li>
+        <li>📈 Avg XP Growth: +9% this month</li>
+        <li>🎓 Active Mentors: 12</li>
+      </ul>
+      <canvas id="electronicsChart" width="400" height="200"></canvas>
+    </div>
+  </section>
+
+  <script>
+    // Tailoring Guild Chart
+    const tailoringCtx = document.getElementById('tailoringChart').getContext('2d');
+    new Chart(tailoringCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Apprentice', 'Artisan', 'Master'],
+        datasets: [{
+          label: 'Tailoring Guild Ranks',
+          data: [620, 480, 140],
+          backgroundColor: ['#f4a261', '#2a9d8f', '#e76f51']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: 'Tailoring Guild Rank Distribution'
+          }
+        }
+      }
+    });
+
+    // Electronics Guild Chart
+    const electronicsCtx = document.getElementById('electronicsChart').getContext('2d');
+    new Chart(electronicsCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Apprentice', 'Artisan', 'Master'],
+        datasets: [{
+          label: 'Electronics Guild Ranks',
+          data: [400, 380, 140],
+          backgroundColor: ['#90caf9', '#42a5f5', '#1e88e5']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: 'Electronics Guild Rank Distribution'
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

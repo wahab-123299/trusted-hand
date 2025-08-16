@@ -1,0 +1,110 @@
+.contractor-bio {
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header Section */
+.bio-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contractor-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Guild Badge Styling */
+.guild-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+.guild-badge.bronze { background: #cd7f32; color: white; }
+.guild-badge.silver { background: #c0c0c0; color: black; }
+.guild-badge.gold { background: #ffd700; color: black; }
+.guild-badge.platinum { background: #e5e4e2; color: black; }
+
+/* Body Section */
+.bio-body h3 {
+  margin-top: 24px;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+}
+
+.bio-body p,
+.bio-body ul {
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+/* Portfolio Gallery */
+.portfolio-gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.portfolio-gallery img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Booking Button */
+.book-button {
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+  background-color: #0056b3;
+}
+
+.book-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.book-button:focus {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .bio-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contractor-photo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .portfolio-gallery img {
+    width: 100%;
+    height: auto;
+  }
+}

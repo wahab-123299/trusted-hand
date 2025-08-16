@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TrustedHand - connect with skilled artisans, post jobs, join guilds, grow your craft." />
+  <meta name="keywords" content="Repairs, Jobs, Apprenticeship, Mentorship, Contractors, Lagos, Nigeria" />
+  <meta name="author" content="TrustedHand" />
+  <title>TrustedHand | skill. trust. community.</title>
+  <link rel="icon" href="hands.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="BrowserContractor.css" />
+  <meta name="theme-color" content="#0066cc" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="hands.png" alt="TrustedHand Logo" width="80" height="100" />
+      <h1>TrustedHands</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="BrowserContractor.html" class="active">Browse Contractors</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="job-listing.html">Jobs</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname;
+        navLinks.forEach(link => {
+          if (link.getAttribute("href") === currentPage || currentPage.endsWith(link.getAttribute("href"))) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </header>
+
+  <main>
+    <section class="top-bar">
+      <div class="search-bar">
+        <input type="text" id="contractorSearch" placeholder="🔍 Search by name, skill, or ID..." />
+        <button type="button" id="searchBtn"> Search</button>
+      </div>
+
+      <div class="filters">
+        <select id="guildFilter">
+          <option value="">All Guilds</option>
+          <option value="Tailoring">Tailoring</option>
+          <option value="Plumbing">Plumbing</option>
+          <option value="Hair Styling">Hair Styling</option>
+          <option value="Electronics">Electronics</option>
+        </select>
+
+        <select id="rankFilter">
+          <option value="">All Ranks</option>
+          <option value="Novice">Novice ★☆☆</option>
+          <option value="Novice2">Novice ★★☆</option>
+          <option value="Novice3">Novice ★★★</option>
+          <option value="Artisan1">Artisan ★☆☆</option>
+          <option value="Artisan2">Artisan ★★☆</option>
+          <option value="Artisan3">Artisan ★★★</option>
+          <option value="Master1">Master ★☆☆</option>
+          <option value="Master2">Master ★★☆</option>
+          <option value="Master3">Master ★★★</option>
+        </select>
+
+        <select id="locationFilter">
+          <option value="">All Locations</option>
+          <option value="Lagos">Lagos</option>
+          <option value="Abuja">Abuja</option>
+          <option value="Port Harcourt">Port Harcourt</option>
+          <option value="Ibadan">Ibadan</option>
+          <option value="Benin City">Benin City</option>
+          <option value="Ibafo">Ibafo</option>
+          <option value="Ota">Ota</option>
+        </select>
+      </div>
+
+      <div id="pagination">
+        <button onclick="prevPage()">Prev</button>
+        <span id="page-numbers"></span>
+        <button onclick="nextPage()">Next</button>
+      </div>
+
+      <div id="results-container"></div>
+    </section>
+
+    <section class="browse-contractors">
+      <div class="contractor-grid" id="contractorGrid" role="list">
+        <!-- Contractor cards go here -->
+        <!-- Example card -->
+        <div class="contractor-card" role="listitem">
+          <img src="profile1.jpg" alt="Contractor Photo" class="profile-img" />
+          <p><strong>ID:</strong> TH-00849</p>
+          <p><strong>Skill:</strong> Plumbing</p>
+          <p><strong>Rank:</strong> #3 (Top Rated)</p>
+          <p><strong>Location:</strong> Ikeja, Lagos</p>
+          <a href="contractor-profile.html" class="view-bio-btn">View Full Bio →</a>
+        </div>
+        <!-- Repeat for other contractors -->
+      </div>
+      <p id="noResults" class="hidden" aria-live="polite">No contractors match your criteria.</p>
+    </section>
+  </main>
+
+  <script src="BrowserContractor.js"></script>
+</body>
+</html>

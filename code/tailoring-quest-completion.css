@@ -1,0 +1,83 @@
+/* Quest Completion Section */
+.quest-completion {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.quest-completion h1 {
+  font-size: 1.8em;
+  color: #1f8cdf;
+  margin-bottom: 10px;
+}
+
+.quest-completion p {
+  font-size: 1em;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+/* Form Styles */
+.quest-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quest-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.quest-form input[type="text"],
+.quest-form select,
+.quest-form input[type="file"],
+.quest-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: #fdfdfd;
+  transition: border-color 0.3s ease;
+}
+
+.quest-form input[type="text"]:focus,
+.quest-form select:focus,
+.quest-form textarea:focus {
+  border-color: #1e88e5;
+  outline: none;
+}
+
+/* File Input */
+.quest-form input[type="file"] {
+  padding: 8px;
+  background-color: #f0f8ff;
+  border: 1px dashed #1e88e5;
+}
+
+/* Textarea */
+.quest-form textarea {
+  resize: vertical;
+}
+
+/* Submit Button */
+.quest-form button {
+  align-self: flex-start;
+  padding: 12px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quest-form button:hover {
+  background-color: #1565c0;
+}

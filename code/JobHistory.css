@@ -1,0 +1,65 @@
+/* Container */
+.job-history {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.job-history h3 {
+  font-size: 1.8rem;
+  color: #0066cc;
+  margin-bottom: 1.5rem;
+}
+
+/* Job Card */
+.job-card {
+  background-color: #fff;
+  border-left: 6px solid #5cb85c;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.job-card h4 {
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1.4rem;
+}
+
+.job-card p {
+  margin: 0.4rem 0;
+  color: #555;
+}
+
+.job-card strong {
+  color: #222;
+}
+
+/* Rating Styling */
+.job-card p:nth-child(4) {
+  color: #f0ad4e;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .job-history {
+    padding: 0.5rem;
+  }
+
+  .job-card h4 {
+    font-size: 1.2rem;
+  }
+
+  .job-card p {
+    font-size: 0.95rem;
+  }
+}

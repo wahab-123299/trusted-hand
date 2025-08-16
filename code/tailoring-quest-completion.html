@@ -1,0 +1,24 @@
+<section class="quest-completion">
+  <h1>📤 Submit Tailoring Guild Quest</h1>
+  <p>Upload proof of your completed tailoring quest to level up in the guild.</p>
+
+  <form action="#" method="post" enctype="multipart/form-data" class="quest-form">
+    <label for="name">🧵 Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="quest">🎮 Quest Completed:</label>
+    <select id="quest" name="quest">
+      <option value="apprentice">🔰 Sew 3 basic garments</option>
+      <option value="artisan">⚔️ Design and deliver custom outfit</option>
+      <option value="master">🛡️ Run a 2-machine tailoring shop</option>
+    </select>
+
+    <label for="proof">📸 Upload Photo/Video:</label>
+    <input type="file" id="proof" name="proof" accept="image/*,video/*" required>
+
+    <label for="notes">🗒️ Notes or Description:</label>
+    <textarea id="notes" name="notes" rows="5" placeholder="Describe your work..."></textarea>
+
+    <button type="submit" class="btn primary">🚀 Submit Quest</button>
+  </form>
+</section>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guild Dashboard | TrustedHand</title>
+  <link rel="stylesheet" href="plumbing-dashboard.css" />
+</head>
+<body>
+
+  <section class="guild-dashboard">
+    <h1>🧑🏾‍🔧 Welcome, Oladimeji</h1>
+    <p>Your journey in the Plumbing Guild continues. Here's your dashboard:</p>
+
+    <div class="dashboard-grid">
+
+      <!-- Rank & Badge -->
+      <div class="dashboard-card">
+        <h3>🎖️ Current Rank: Artisan ⚔️</h3>
+        <img src="badges/artisan.png" alt="Artisan Badge" />
+      </div>
+
+      <!-- Matched Jobs -->
+      <div class="dashboard-card">
+        <h3>💼 Matched Jobs</h3>
+        <ul>
+          <li>Fix bathroom leak – ₦5,000 – Yaba</li>
+          <li>Install kitchen pipe – ₦7,500 – Ikeja</li>
+        </ul>
+        <a href="job-board.html" class="btn outline">View All Jobs</a>
+      </div>
+
+      <!-- Mentor Info -->
+      <div class="dashboard-card">
+        <h3>🎓 Your Mentor</h3>
+        <p>Obinna “The Pipe Whisperer”</p>
+        <a href="mentor-chat.html" class="btn primary">Message Mentor</a>
+      </div>
+
+      <!-- Quest Progress -->
+      <div class="dashboard-card">
+        <h3>📊 Quest Progress</h3>
+        <ul>
+          <li>✅ Apprentice Quest: Completed</li>
+          <li>🔄 Artisan Quest: In Progress</li>
+          <li>🔒 Master Quest: Locked</li>
+        </ul>
+        <a href="quest-complete.html" class="btn outline">📤 Submit Completed Quest</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="badge-wall">
+    <h2>🏅 Your Guild Badges</h2>
+    <div class="badge-grid">
+      <div class="badge unlocked">
+        <img src="badges/apprentice.png" alt="Apprentice Badge" />
+        <p>🔰 Apprentice</p>
+      </div>
+      <div class="badge unlocked">
+        <img src="badges/artisan.png" alt="Artisan Badge" />
+        <p>⚔️ Artisan</p>
+      </div>
+      <div class="badge locked">
+        <img src="badges/master.png" alt="Master Badge" />
+        <p>🛡️ Master</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="xp-progress">
+    <h2>📈 Your Guild XP</h2>
+    <div class="xp-bar-container">
+      <div class="xp-bar-fill" id="xpFill" style="width: 65%;"></div>
+    </div>
+    <p id="xpText">🔰 65 XP / 100 XP to reach Artisan rank</p>
+    <div class="badge" id="artisanBadge">⚔️ Artisan Badge</div>
+  </section>
+
+</body>
+</html>

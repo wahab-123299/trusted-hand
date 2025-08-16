@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Settings</title>
+  <link rel="stylesheet" href="admin-settings.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+  <section class="admin-settings">
+    <h1>⚙️ Platform Settings</h1>
+
+    <form class="settings-form">
+      <label for="xp-threshold">XP to Rank Up:</label>
+      <input type="number" id="xp-threshold" value="1000">
+
+      <label for="badge-limit">Max Badges per User:</label>
+      <input type="number" id="badge-limit" value="10">
+
+      <label for="mentor-toggle">Mentor Applications:</label>
+      <select id="mentor-toggle">
+        <option value="enabled">Enabled</option>
+        <option value="disabled">Disabled</option>
+      </select>
+
+      <label for="job-visibility">Job Visibility:</label>
+      <select id="job-visibility">
+        <option value="public">Public</option>
+        <option value="guild-only">Guild Members Only</option>
+      </select>
+
+      <button type="submit" class="btn primary">💾 Save Settings</button>
+    </form>
+  </section>
+</body>
+</html>

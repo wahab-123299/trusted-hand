@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit Hair Styling Quest</title>
+  <link rel="stylesheet" href="quest-form.css">
+</head>
+<body>
+
+  <section class="quest-completion">
+    <h1>📤 Submit Hair Styling Quest</h1>
+    <p>Upload proof of your completed quest to level up in the Hair Styling Guild.</p>
+
+    <form action="#" method="post" enctype="multipart/form-data" class="quest-form">
+      <label for="name">💇🏾‍♂️ Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="quest">🎮 Quest Completed:</label>
+      <select id="quest" name="quest" required>
+        <option value="">-- Select a Quest --</option>
+        <option value="apprentice">🔰 Braid 3 clients</option>
+        <option value="artisan">⚔️ Master 5 haircut styles</option>
+        <option value="master">🛡️ Run a 2-chair salon</option>
+      </select>
+
+      <label for="proof">📸 Upload Photo/Video:</label>
+      <input type="file" id="proof" name="proof" accept="image/*,video/*" required>
+
+      <label for="notes">🗒️ Notes or Description:</label>
+      <textarea id="notes" name="notes" rows="5" placeholder="Describe what you did..."></textarea>
+
+      <button type="submit" class="btn primary">🚀 Submit Quest</button>
+    </form>
+  </section>
+
+</body>
+</html>

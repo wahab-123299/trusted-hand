@@ -1,0 +1,37 @@
+/* calendarPanel.css */
+.calendar-panel {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: auto;
+}
+
+.calendar-panel h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.job-list {
+  list-style: none;
+  padding: 0;
+}
+
+.job-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.job-title {
+  font-weight: bold;
+  color: #444;
+}
+
+.job-date {
+  color: #666;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit Completed Quest | Plumbing Guild</title>
+  <link rel="stylesheet" href="quest-completion.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <section class="quest-completion">
+    <h1>✅ Submit Completed Quest</h1>
+    <p>Upload proof of your work and level up in the Plumbing Guild.</p>
+
+    <form action="#" method="post" enctype="multipart/form-data" class="quest-form">
+      <label for="name">🧑🏾 Your Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="quest">🎮 Quest Completed:</label>
+      <select id="quest" name="quest" required>
+        <option value="">-- Select a Quest --</option>
+        <option value="apprentice">🔰 Fix kitchen leak</option>
+        <option value="artisan">⚔️ Install dual-flow system</option>
+        <option value="master">🛡️ Lead plumbing team</option>
+      </select>
+
+      <label for="proof">📸 Upload Photo/Video:</label>
+      <input type="file" id="proof" name="proof" accept="image/*,video/*" required />
+
+      <label for="notes">🗒️ Notes or Description:</label>
+      <textarea id="notes" name="notes" rows="5" placeholder="Describe what you did..."></textarea>
+
+      <button type="submit" class="btn primary">🚀 Submit Quest</button>
+    </form>
+  </section>
+
+</body>
+</html>

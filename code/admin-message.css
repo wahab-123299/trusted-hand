@@ -1,0 +1,75 @@
+/* ===============================
+   📢 Admin Messaging Section
+=============================== */
+.admin-messages {
+  background-color: var(--bg-module);
+  padding: 30px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.admin-messages h1,
+.admin-messages h2 {
+  margin-bottom: 20px;
+  color: var(--text-main);
+  font-size: 1.5rem;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.message-form label {
+  font-weight: 600;
+  color: var(--text-subtle);
+}
+
+.message-form input,
+.message-form select,
+.message-form textarea {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background-color: #fff;
+  color: var(--text-main);
+}
+
+.message-form textarea {
+  resize: vertical;
+}
+
+.sent-log {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sent-log li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  color: var(--text-subtle);
+}
+
+.sent-log li strong {
+  color: var(--text-main);
+}
+
+@media (max-width: 600px) {
+  .admin-messages {
+    padding: 20px 10px;
+  }
+
+  .admin-messages h1,
+  .admin-messages h2 {
+    font-size: 1.25rem;
+  }
+}
